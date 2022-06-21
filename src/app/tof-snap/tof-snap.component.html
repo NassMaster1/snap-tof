@@ -1,0 +1,11 @@
+<div class="face-snap-card" [ngClass]="{snapped:buttonLikes=='UnLike' }">
+<p> Prix: {{0.323 | currency:'EUR':'code'}}</p>
+<h2>{{tofsnap.title | titlecase}}</h2>
+<h3>{{tofsnap.createDate |date }}</h3>
+<p > photo prise à {{tofsnap.location}} </p>
+<img [src]="tofsnap.image" [alt]="tofsnap.title">
+<p>
+    <button (click)="onAddLike()"> {{buttonLikes}} </button>
+   <span [ngStyle]="{color:'rgba(0,'+tofsnap.snaps+',0)'}">{{tofsnap.snaps}}</span>
+</p>
+</div>
