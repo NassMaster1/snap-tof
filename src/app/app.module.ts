@@ -6,16 +6,22 @@ import { AppComponent } from './app.component';
 import { TofSnapComponent } from './tof-snap/tof-snap.component';
 import { TofSnapListComponent } from './tof-snap-list/tof-snap-list.component';
 import { HeaderComponent } from './header/header.component';
+import {AppRoutingModule} from "./app-routing.module";
+import { LeandingPageComponent } from './leanding-page/leanding-page.component';
+import { SingleTofComponent } from './single-tof/single-tof.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TofSnapComponent,
     TofSnapListComponent,
-    HeaderComponent
+    HeaderComponent,
+    LeandingPageComponent,
+    SingleTofComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [
     {
@@ -24,7 +30,7 @@ import { HeaderComponent } from './header/header.component';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { 
+export class AppModule {
   constructor(){
     registerLocaleData(fr.default);
   }
